@@ -14,7 +14,7 @@ public class Test extends HttpServlet {
         String user = req.getParameter("user");
         String pass = req.getParameter("pass");
         if(user.equals("admin") && pass.equals("admin")){
-            String sucess = "Hello " + user;
+            String sucess = "Hello " + user +  "ur pass is " + pass;
             req.setAttribute("sucess", sucess);
             req.getRequestDispatcher("login.jsp").forward(req, resp);
         }
